@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Calculator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <h1 style="margin-left: 20%;">Calculator</h1>
+        <div>
+            <table style="height: 650px;width: 60%;">
+                <tbody>
+                    <tr rowspan="6" style="margin: 0px !important;padding: 0px !important;">
+                        <td colspan="4" style="margin: 0px !important;padding: 0px !important;">
+                            <input type="text" id="calcIP" dir="rtl" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td onclick="clearAll()" style="color: #E64A19 !important;font-weight: bold;">C</td>
+                        <td style="font-weight: bold">&#x2190;</td>
+                        <td onclick="addExpression('/')">&#xF7;</td>
+                        <td onclick="addExpression('*')">&#215;</td>
+                    </tr>
+                    <tr>
+                        <td onclick="addNumbers(7)">7</td>
+                        <td onclick="addNumbers(8)">8</td>
+                        <td onclick="addNumbers(9)">9</td>
+                        <td onclick="addExpression('-')">&#8722;</td>
+                    </tr>
+                    <tr>
+                        <td onclick="addNumbers(4)">4</td>
+                        <td onclick="addNumbers(5)">5</td>
+                        <td onclick="addNumbers(6)">6</td>
+                        <td onclick="addExpression('+')">&#43;</td>
+                    </tr>
+                    <tr>
+                        <td onclick="addNumbers(1)">1</td>
+                        <td onclick="addNumbers(2)">2</td>
+                        <td onclick="addNumbers(3)">3</td>
+                        <td onclick="calculate()" id="equals" rowspan="2">=</td>
+                    </tr>
+                    <tr>
+                        <td onclick="addExpression('%')">%</td>
+                        <td onclick="addNumbers(0)">0</td>
+                        <td  onclick="addExpression('.')">.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
