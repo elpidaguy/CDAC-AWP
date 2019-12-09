@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Assignment First</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script> -->
+
+    <style>
+        table.mytable {
+            border: 2px solid black;
+            border-collapse: collapse;
+            font-size: 20px;
+            padding: 10px;
+        }
+    </style>
+
+    <script>
+        var listStudent = [];
+        console.log(listStudent);
+
+        function clearAll() {
+            listStudent = [];
+            document.getElementById("listTable").innerHTML = "";
+        }
+
+        function addNewEntry() {
+
+            var obj = {};
+            obj.prn = document.getElementById("prn").value;
+            obj.name = document.getElementById("name").value;
+            obj.per = document.getElementById("prcnt").value;
+
+            listStudent.push(obj);
+
+            var studRow = "";
+            for (var i = 0; i < listStudent.length; i++) {
+                studRow = studRow + "<tr><td>" + listStudent[i].prn + "</td>" + "<td>" + listStudent[i].name + "</td>" +
+                    "<td>" + listStudent[i].per + "</td></tr>";
+            }
+
+            document.getElementById("listTable").innerHTML = studRow;
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div style="margin-top: 5%;margin-left: 15%;margin-right: 15%;">
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Enter PRN" id="prn"
+                            style="height:30px;border:2px solid #000;padding:3px" />
+                    </td>
+
+                    <td>
+                        <input type="text" placeholder="Enter Name" id="name"
+                            style="height:30px;border:2px solid #000;padding:3px" />
+                    </td>
+
+                    <td>
+                        <input type="text" placeholder="Enter Percent" id="prcnt"
+                            style="height:30px;border:2px solid #000;padding:3px" />
+                    </td>
+
+                    <td>
+                        <button type="submit" id="submit" onclick="addNewEntry()"
+                            style="background-color: aqua;color: black;height: 40px;border:2px solid #000"> Add To Table
+                        </button>
+                    </td>
+
+                    <td>
+                        <button type="button" id="reset" onclick="clearAll()"
+                            style="background-color: crimson;color: aliceblue;height: 40px;border:2px solid #000"> clear
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div>
+            <table border="1" style="width:100%;border-collapse: collapse;font-size: 25px;">
+                <thead style="background-color: red;color:white;">
+                    <tr>
+                        <th>PRN</th>
+                        <th>NAME</th>
+                        <th>PERECENT</th>
+                    </tr>
+                </thead>
+                <tbody id="listTable">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
