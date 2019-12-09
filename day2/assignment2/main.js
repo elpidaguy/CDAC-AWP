@@ -13,17 +13,6 @@ function appendHTML(x)
     document.getElementById("calcIP").value = inputContent;
 }
 
-function addNumbers(x)
-{
-    appendHTML(x);
-}
-
-function addExpression(x)
-{
-    appendHTML(x);
-
-}
-
 function calculate()
 {
     var expr = document.getElementById("calcIP").value;
