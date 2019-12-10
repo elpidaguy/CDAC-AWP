@@ -1,2 +1,6 @@
 # CDAC-AWP
+
+[![Generic badge](
+https://img.shields.io/github/license/elpidaguy/CDAC-AWP)](https://github.com/elpidaguy/CDAC-AWP/blob/master/LICENSE)
+
 This Repo contains all the assignments solutions for module AWP at CDAC ACTS
