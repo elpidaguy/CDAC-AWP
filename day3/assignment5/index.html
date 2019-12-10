@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>JQUERY AJAX API Parse</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid #cccccc;
+            border-collapse: collapse;
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #ececec;
+        }
+    </style>
+    <script>
+        var result = [];
+        $(document).ready(function () {
+            var url = "https://jsonplaceholder.typicode.com/users";
+            $("#addTableButton").click(function () {
+
+                $.get(url, function (jsonData, status) {
+                    result = jsonData;
+                    var content = "";
+                    jsonData.forEach((item) => {
+                        content = content +
+                            "<tr onclick='showMoreData(" + item.id + ")'><td>" + item
+                            .name + "</td><td>" + item.email +
+                            "</td><td>" + item.phone + "</td><td>" + item.address.city +
+                            "</td></tr>";
+                    });
+                    $("#myTableData").html(JSON.stringify(content));
+                });
+            });
+        });
+
+        function showMoreData(id) {
+            var content = "ID:"+result[id-1].id+"<br>"+
+            "Name:"+result[id-1].name+"<br>"+
+            "Username:"+result[id-1].username+"<br>"+
+            "Email:"+result[id-1].email+"<br>"+
+            "Address:"+result[id-1].address.street+","+result[id-1].address.suite+","+result[id-1].address.city+","+result[id-1].address.zipcode+"<br>"+
+            "Phone:"+result[id-1].phone+"<br>"+
+            "Website:"+result[id-1].website+"<br>"+
+            "Company:"+result[id-1].company.name+","+result[id-1].company.catchPhrase+","+result[id-1].company.bs+"<br><hr>"+
+            "<button onclick='resetExtra()'>Close</button>";
+            
+            document.getElementById("moreData").innerHTML = content;
+        };
+
+        function resetExtra()
+        {
+            document.getElementById("moreData").innerHTML = "";
+        }
+    </script>
+</head>
+
+<body>
+
+    <div style="margin-left: 5%;margin-right: 5%;margin-top: 5%;">
+        <div>
+            <button id="addTableButton"
+                style="background-color:dodgerblue;color: aliceblue;height: 50px;width: 100px;">Add Data</button>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div id="moreData">
+
+        </div>
+        <br>
+        <br>
+        <div>
+            <table>
+                <thead style="background-color: dodgerblue;color:white;">
+                    <tr style="display: block;
+                    position: relative;">
+                        <th style="width: 202px;">NAME</th>
+                        <th style="width:235px">EMAIL</th>
+                        <th style="width: 195px;">PHONE</th>
+                        <th style="width: 150px;">CITY</th>
+                    </tr>
+                </thead>
+                <tbody id="myTableData" style="display: block;
+                overflow: auto;
+                width: 100%;
+                height: 350px;">
+
+                    <tr>
+                        <td colspan="4">
+                            <h1>NO DATA TO DISPLAY</h1>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
