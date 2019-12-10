@@ -1,0 +1,35 @@
+[
+    {
+        "prn":1,
+        "name":"Amit",
+        "marks": {
+            "DBMS":100,
+            "AWP":100,
+            "OS":100
+        },
+        "contact": ["9826644321"],
+        "percentage":100
+    },
+    {
+        "prn":2,
+        "name":"Rohan",
+        "marks": {
+            "DBMS":20,
+            "AWP":10,
+            "OS":15
+        },
+        "contact": ["9826624321","241234347"],
+        "percentage":15
+    },
+    {
+        "prn":3,
+        "name":"Ankur",
+        "marks": {
+            "DBMS":32,
+            "AWP":9,
+            "OS":10
+        },
+        "contact": ["8768875431","644563234"],
+        "percentage":56
+    }
+]
