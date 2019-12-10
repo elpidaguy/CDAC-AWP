@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>JQUERY CALCULATOR</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#resultBtn").click(function () {
+                var num1 = parseInt($("#num1").val());
+                var num2 = parseInt($("#num2").val());
+                var num3 = num1 + num2;
+                $("#result").html("Result is: " + num3);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div style="margin-left: 15%;margin-right: 15%;margin-top: 5%">
+        <div>
+            <span>Enter Number 1: </span>
+            <input type="text" id="num1">
+        </div>
+        <br>
+        <div>
+            <span>Enter Number 2: </span>
+            <input type="text" id="num2">
+        </div>
+        <br>
+        <div>
+            <button id="resultBtn">SUM</button>
+        </div>
+        <br>
+        <div id="result">
+        </div>
+    </div>
+</body>
+
+</html>
