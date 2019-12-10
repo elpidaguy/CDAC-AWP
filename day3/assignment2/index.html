@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>JSON Parse</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script> -->
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid #cccccc;
+            border-collapse: collapse;
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #ececec;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#addTableButton").click(function () {
+                console.log("inside click");
+                var content = "";
+                jsonData.forEach((item) => {
+                    content = content + "<tr><td><input type='checkbox'/></td><td>" + item
+                        .itemname + "</td><td>" + item.price +
+                        "</td><td>" + item.category + "</td></tr>";
+                });
+                $("#myTableData").html(content);
+            });
+        });
+
+        var jsonData = [{
+                "itemname": "Shoe",
+                "price": 2500,
+                "category": "personal"
+            },
+            {
+                "itemname": "T-Shirt",
+                "price": 1500,
+                "category": "Garments"
+            },
+            {
+                "itemname": "Book-ignited minds",
+                "price": 350,
+                "category": "Stationary"
+            },
+            {
+                "itemname": "Soaps",
+                "price": 200,
+                "category": "personal"
+            },
+            {
+                "itemname": "Watch",
+                "price": 1000,
+                "category": "personal"
+            },
+            {
+                "itemname": "Novel-to kill a mockingbird",
+                "price": 1000,
+                "category": "Stationary"
+            },
+            {
+                "itemname": "Hoodies",
+                "price": 2500,
+                "category": "Garments"
+            },
+            {
+                "itemname": "Mobile Phone-iphone",
+                "price": 62000,
+                "category": "Technology"
+            },
+            {
+                "itemname": "Hair conditioner",
+                "price": 500,
+                "category": "personal"
+            },
+            {
+                "itemname": "JAVA BOOK",
+                "price": 100,
+                "category": "Stationary"
+            }
+        ];
+    </script>
+</head>
+
+<body>
+
+    <div style="margin-left: 25%;margin-right: 25%;margin-top: 5%;">
+        <div>
+            <button id="addTableButton"
+                style="background-color:deepskyblue;color: aliceblue;height: 50px;width: 100px;">Add Table</button>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <table>
+            <thead style="background-color: deepskyblue;color:white">
+                <tr>
+                    <th>Select</th>
+                    <th>Item Name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody id="myTableData">
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
