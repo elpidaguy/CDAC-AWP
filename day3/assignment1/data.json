@@ -32,4 +32,16 @@
         "contact": ["8768875431","644563234"],
         "percentage":56
     }
+    ,
+    {
+        "prn":4,
+        "name":"Jason",
+        "marks": {
+            "DBMS":32,
+            "AWP":9,
+            "OS":10
+        },
+        "contact": ["8768875431","644563234"],
+        "percentage":56
+    }
 ]
