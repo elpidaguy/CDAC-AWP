@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Documentation Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="jquery-3.4.1.min.js"></script>
+
+    <style type="text/css">
+        body {
+            margin-left: 3vw;
+            margin-right: 3vw;
+        }
+
+        .header {
+            width: 100%;
+            margin: 0px;
+            text-align: center;
+            font: 50px bold;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .container {
+            padding: 2%;
+            margin: 0px;
+            width: 90%;
+            height: 80vh;
+        }
+
+        .content {
+            margin: 6%;
+            padding: 10px;
+            border-bottom: 1px solid black;
+        }
+
+        .leftNav {
+            float: left;
+            width: 20%;
+            background-color: aliceblue;
+            min-height: 80vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: dodgerblue;
+            font-weight: bold;
+            font-size: 1em;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .infoDiv {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font: 3em;
+            margin-left: 20%;
+            padding: 10px 10px 10px 30px;
+            display: none;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            console.log("inside ready");
+            $("#intro").css({
+                "display": "block"
+            });
+            var curr = $("#intro");
+            $("a").click(function () {
+                curr.hide();
+                console.log($(this).attr("id"));
+                console.log(curr);
+                if($(this).attr("id") == "aIntro")
+                {
+                    $("#intro").show();
+                    curr = $("#intro");
+                }else if($(this).attr("id") == "aWhat")
+                {
+                    $("#What").show();
+                    curr = $("#What");
+                }
+                else if($(this).attr("id") == "aJava")
+                {
+                    $("#Java").show();
+                    curr = $("#Java");
+                }else if($(this).attr("id") == "aHello")
+                {
+                    $("#Hello").show();
+                    curr = $("#Hello");
+                }else if($(this).attr("id") == "aVars")
+                {
+                    $("#Vars").show();
+                    curr = $("#Vars");
+                };
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <span>Documentation</span>
+    </div>
+    <div class='container'>
+        <div class="leftNav">
+            <div class='content'> <a href='javaScript:void(0);' id="aIntro">Introduction</a>
+            </div>
+            <div class='content'> <a href='javaScript:void(0);' id="aWhat">What you should already
+                    know?</a></div>
+            <div class='content'> <a href='javaScript:void(0);' id="aJava">JavaScript and Java</a></div>
+            <div class='content'> <a href='javaScript:void(0);' id="aHello">Hello World</a></div>
+            <div class='content'> <a href='javaScript:void(0);' id="aVars">Variables</a></div>
+        </div>
+
+        <div class="infoDiv" id='intro'>
+            I know how to make 2 divs float side by side, simply float one to the left and the other to the right.
+
+            But how to do this with 3 divs or should I just use tables for this purpose?
+        </div>
+        <div class='infoDiv' id='What'>
+            How can I get two divs to sit next to each other rather than on top of each other?
+
+            Really simple code, I thought giving a div a width would make it inline rather than a block element so they
+            would sit next to each other.
+
+            I know its easy enough with floats/positioning but is their something simple I am missing or is it not
+            posible?
+        </div>
+        <div class="infoDiv" id="Java">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga blanditiis accusamus ut, dolore saepe natus
+            eligendi voluptas provident laudantium iusto sint itaque, temporibus culpa necessitatibus ducimus sequi rem
+            voluptate tempora.
+        </div>
+        <div class="infoDiv" id="Hello">
+                Fuga blanditiis accusamus ut, dolore saepe natus
+                eligendi voluptas provident laudantium iusto sint itaque, temporibus culpa necessitatibus ducimus sequi rem
+                voluptate tempora.
+            </div>
+            <div class="infoDiv" id="Vars">
+                    temporibus culpa necessitatibus ducimus sequi rem
+                    voluptate tempora.
+                </div>
+    </div>
+</body>
+
+</html>
