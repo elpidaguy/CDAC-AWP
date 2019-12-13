@@ -1,0 +1,189 @@
+/* main css */
+
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+body {
+    margin: 0px;
+}
+
+.logo {
+    background-image: url("../../resources/icons/icon.png");
+    background-position: inherit;
+    background-size: cover;
+    height: 70px;
+    width: 150px;
+    float: left;
+}
+
+.logo1 {
+    background-image: url("../../resources/icons/icon.png");
+    background-position: inherit;
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+    float: left;
+    text-align: center;
+    margin: 5px;
+}
+
+/* NAV BAR CSS */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 26px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+/* body */
+
+.container {
+    /* padding: 50px; */
+    display: block;
+    /* min-height: 800px; */
+    background-color: rgb(248, 248, 248);
+}
+
+#brandImage {
+    /* background-color: rgba(0, 223, 223, 0.6); */
+    height: 550px;
+    background-image: url("../../resources/images/img3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#brandImage div h1 {
+    position: absolute;
+    text-align: center;
+    bottom: 200px;
+    right: 0;
+    width: 100%;
+}
+
+#brandImage div h6 {
+    position: absolute;
+    text-align: center;
+    bottom: 150px;
+    right: 0;
+    width: 100%;
+}
+
+#brandImage h1 {
+    font-size: 70px;
+    color: crimson;
+}
+
+#brandImage h6 {
+    margin-top: 10px;
+    font-size: 30px;
+    color: dodgerblue;
+}
+
+
+/* quote section */
+
+#quoteSection {
+    text-align: center;
+    margin: 0 25% 0 25%;
+    min-height: 200px;
+    padding: 6% 0 0 0;
+}
+
+#quoteSection span {
+    padding: 8% 0 8% 0;
+    border-top: 8px solid teal;
+    border-bottom: 8px solid teal;
+}
+
+#quoteSection strong {
+    font-size: 80px;
+    font-weight: bolder;
+    color: teal;
+}
+
+/* footer */
+
+.footer {
+    padding: 5%;
+    height: 30vh;
+}
+
+.footer span,
+.footer strong {
+    color: #4CAF50;
+}
+
+.footer p {
+    font-size: 25px;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4CAF50;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 3ms;
+}
+
+.copyright {
+    background-color: rgb(34, 34, 34);
+    min-height: 60px;
+}
+
+.copyright div {
+    text-align: center;
+    padding: 20px;
+    font-weight: 200;
+    color: white;
+}
+
+/* Flex Box Test */
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #333;
+}
+
+.flex-container>div {
+    background-color: #333;
+    color: #f1f1f1;
+    width: 33%;
+    margin: 10px;
+    text-align: left;
+    /* line-height: 75px; */
+    /* font-size: 30px; */
+}
