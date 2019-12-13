@@ -1,0 +1,264 @@
+<html>
+
+<head>
+    <title> Survey Form </title>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet" />
+    <script src="jquery-3.4.1.min.js"></script>
+    <style>
+        html,
+        body {
+            background-color: rgb(99, 204, 204);
+            font-family: 'Comfortaa', cursive;
+            min-width: 320px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea {
+            padding: .5em;
+        }
+
+        select {
+            height: 2.5em;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #cccccc;
+            border-collapse: collapse;
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #ececec;
+        }
+
+        .wrapper {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #ebebeb;
+            height: auto;
+            text-align: center;
+            padding: 1em;
+            border-radius: 1%;
+        }
+
+        .labels {
+            display: inline-block;
+            text-align: right;
+            width: 40%;
+            padding: 5px;
+            vertical-align: top;
+            margin-top: 10px;
+        }
+
+        .rightTab {
+            display: inline-block;
+            text-align: left;
+            width: 48%;
+            vertical-align: middle;
+        }
+
+        .radio,
+        .checkbox {
+            position: relative;
+            display: block;
+            padding-bottom: 10px;
+            left: -43px;
+            margin-left: 10px;
+
+        }
+
+        .button-submit {
+            background: dodgerblue;
+            color: white;
+            border: none;
+            margin-top: 1em;
+            padding: .5em;
+            font: bold 15px 'Comfortaa', cursive;
+        }
+
+        #userAge {
+            width: 40px;
+        }
+
+        .recommend,
+        input[type="checkbox"] {
+            float: left;
+            margin-right: 5px;
+        }
+    </style>
+    <script>
+        function resetPage() {
+            window.location.reload();
+
+        }
+
+        $(document).ready(function () {
+            $("#info-section").hide();
+            $("#form-section").show();
+
+            console.log("document ready");
+            $("#submit").click(function () {
+
+                var name = $("#name").val();
+                var email = $("#email").val();
+                var age = $("#number").val();
+                var desc = $("#dropdown").val();
+                var rec = $(".recommend").val();
+                var mostLike = $(".dropdown").val();
+                var impr = $(".checkbox").val();
+                var comments = $("#comments").val();
+
+                if(email.indexOf("@") < 0)
+                {
+                    alert("Please enter valid email");
+                    return;
+                }
+
+                if(age == "" || age == undefined || age == null)
+                {
+                    alert("Please Enter Your Age");
+                    return;
+                }
+
+                var content = "<tr><td>Name:" + name + "</td></tr>" +
+                    "<tr><td>email:" + email + "</td></tr>" +
+                    "<tr><td>age:" + age + "</td></tr>" +
+                    "<tr><td>desc:" + desc + "</td></tr>" +
+                    "<tr><td>rec:" + rec + "</td></tr>" +
+                    "<tr><td>mostLike:" + mostLike + "</td></tr>" +
+                    "<tr><td>impr:" + impr + "</td></tr>" +
+                    "<tr><td>comments:" + comments + "</td></tr>" +
+                    "<tr><td><button id='resetButton' onclick='resetPage()'>Thanks</button></td></tr>";
+
+                $("#infoTable").html(content);
+
+                $("#form-section").hide();
+                $("#info-section").show();
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <header style="padding: 10px;">
+        <h1>Survey Form</h1>
+    </header>
+    <section class="wrapper" id="info-section">
+        <table align="center">
+            <tbody id="infoTable">
+            </tbody>
+        </table>
+    </section>
+    <section class="wrapper" id="form-section">
+        <p id="description">Please let us know how we can improve<p>
+                <form id="survey-form">
+                    <div class="rowTab">
+                        <div class="labels">
+                            <label for="name" id="name-label">* Name:</label>
+                        </div>
+                        <div class="rightTab">
+                            <input class="input-field" type="text" name="name" placeholder="Enter your name" id="name"
+                                maxlength="20" required>
+                        </div>
+                    </div>
+                    <div class="rowTab">
+                        <div class="labels">
+                            <label for="email" id="email-label">* Email:</label>
+                        </div>
+                        <div class="rightTab">
+                            <input type="email" name="email" id="email" class="input-field" maxlength="20" required
+                                placeholder="Enter your Email">
+                        </div>
+                    </div>
+                    <div class="rowTab">
+                        <div class="labels">
+                            <label for="age" id="number-label">* Age:</label>
+                        </div>
+                        <div class="rightTab">
+                            <input id="number" type="number" class="input-field" required placeholder="Age" min="0"
+                                max="100">
+                        </div>
+                        <div class="rowTab">
+                            <div class="labels">
+                                <label for="role">Which option best describes your current role?</label>
+                            </div>
+                            <div class="rightTab">
+                                <select id="dropdown">
+                                    <option disable selected value>Select</option>
+                                    <option value="student">Student</option>
+                                    <option value="professional">Professional</option>
+                                    <option value="freelancer">Freelancer</option>
+                                    <option value="employeed">Employeed</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="rowTab">
+                            <div class="labels">
+                                <label>* How likely is it that you would recommend CDAC to a friend?</label>
+                            </div>
+                            <div class="rightTab">
+                                <ul style="list-style-type: none">
+                                    <li class="radio"><label>Definitely<input type="radio" id="recommend-definitely"
+                                                name="recommend" value="definitely" class="recommend" checked> </label></li>
+                                    <li class="radio"><label>Maybe<input type="radio" id="recommend-maybe"
+                                                name="recommend" value="maybe" class="recommend"></label> </li>
+                                    <li class="radio"><label>Not Sure<input type="radio" id="recommend-not-sure"
+                                                name="recommend" value="notsure" class="recommend"> </label></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="rowTab">
+                            <div class="labels">
+                                <label>Which do you like the most in CDAC?</label>
+                            </div>
+                            <div class="rightTab">
+                                <select class="dropdown">
+                                    <option disable selected value>Select</option>
+                                    <option value="teaching">Teaching</option>
+                                    <option value="labs">Labs</option>
+                                    <option value="foods">Foods</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="rowTab">
+                            <div class="labels">
+                                <label>Things that should be improved in the future <br>(Check all that apply):</label>
+                            </div>
+                            <div class="rightTab">
+                                <ul>
+                                    <li class="checkbox"><label><input type="checkbox" id="frontend" name="interest"
+                                                value="frontend">
+                                            Front-End Projects</label></li>
+                                    <li class="checkbox"><label><input type="checkbox" id="backend" name="interest"
+                                                value="backend">
+                                            Back-End Projects</label></li>
+                                    <li class="checkbox"><label><input type="checkbox" id="datavisu" name="interest"
+                                                value="dataVisualization">
+                                            Data Visualization</label></li>
+                                </ul>
+                            </div>
+                            <div class="rowTab">
+                                <div class="labels">
+                                    <label>Any Comments or Suggestions?</label>
+                                </div>
+                                <div class="rightTab">
+                                    <textarea id="comments" rows="4" cols="30"
+                                        placeholder="Enter your comment here..."></textarea>
+                                </div>
+                            </div>
+                            <input class="button-submit" type="button" value="Submit" id="submit" />
+                </form>
+    </section>
+
+</body>
+
+</html>
