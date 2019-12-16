@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "Name": "San Disk Pen Drive(16 GB)",
+    "price": 200,
+    "desc": "Free up space on PC using 16gb PD"
+  },
+  {
+    "id": 2,
+    "Name": "San Disk Pen Drive(32 GB)",
+    "price": 400,
+    "desc": "Free up space on PC using 32gb PD"
+  },
+  {
+    "id": 3,
+    "Name": "San Disk Pen Drive(64 GB)",
+    "price": 600,
+    "desc": "Free up space on PC using 64gb PD"
+  }
+]

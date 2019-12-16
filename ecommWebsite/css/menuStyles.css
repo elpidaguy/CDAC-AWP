@@ -1,0 +1,12 @@
+#siteMenu{
+    /* background-color: #0065fd!important;  */
+    height: 70px;
+}
+
+#siteMenu .navbar-brand{
+    color: #fff;
+}
+
+#searchBar {
+    width: 30vw !important;
+}
