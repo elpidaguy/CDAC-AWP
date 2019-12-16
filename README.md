@@ -8,5 +8,4 @@ This Repo contains all the assignments solutions for module AWP at CDAC ACTS.
 CodePen: 
 
 ### Day 2 ###
-- Assignment 2
-`[Simple Calculator using HTML, CSS and JavaScript ( One Plus Android phone look-a-like )](https://codepen.io/elpidaguy/pen/BayQojB)`
++ [Simple Calculator using HTML, CSS and JavaScript ( One Plus Android phone look-a-like )](https://codepen.io/elpidaguy/pen/BayQojB)
