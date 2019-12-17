@@ -28,7 +28,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/icons" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\ecommWebsite\assets\icons" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -52,7 +57,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576508064191</updated>
-      <workItem from="1576508066063" duration="5234000" />
+      <workItem from="1576508066063" duration="5712000" />
+      <workItem from="1576589596985" duration="334000" />
+      <workItem from="1576595264535" duration="56000" />
+      <workItem from="1576595326156" duration="4408000" />
     </task>
     <servers />
   </component>
@@ -60,10 +68,18 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="661" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1576508066215">
+    <state x="640" y="247" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1576595316162">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="661" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576508066215" />
+    <state x="640" y="247" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576595316162" />
+    <state x="795" y="443" key="NewPhpFileDialog" timestamp="1576595700978">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="795" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576595700978" />
+    <state x="661" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1576595481555">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="661" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576595481555" />
     <state x="657" y="125" width="606" height="789" key="find.popup" timestamp="1576510190681">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

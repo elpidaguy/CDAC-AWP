@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-primary" id="siteMenu">
-  <a class="navbar-brand" href="#"> <i class="fa fa-fighter-jet fa-3x text-warning" aria-hidden="true"></i>
+  <a class="navbar-brand" href="#"> <img src="assets/icons/logo.png" height="55px" width="55px"> CDAC SHOP
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -28,7 +28,7 @@
 
       <ul class="navbar-nav">
           <li class="nav-item">
-              <button class="text-white btn btn-danger btn-lg"> <i class="fa fa-sign-in" aria-hidden="true"></i>
+              <button class="text-white btn btn-danger btn-lg" onclick="location.href='views/loginView.php'"> <i class="fa fa-sign-in" aria-hidden="true"></i>
                   Sign In</button>
           </li>
       </ul>
