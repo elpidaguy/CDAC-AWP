@@ -25,9 +25,9 @@
                         <img src="../assets/icons/logo.png" height="80%" width="80%">
                         <hr>
                         <h4 class="text-center">CDAC SHOP</h4>
-                        <form class="form-signin" method="post" action="<?php ?>">
-                            <input type="text" class="form-control mb-2" placeholder="Email" required autofocus>
-                            <input type="password" class="form-control mb-2" placeholder="Password" required>
+                        <form class="form-signin" method="post" action="http://localhost/ecommWebsite/serverScripts/authenticate.php">
+                            <input type="text" name="email" class="form-control mb-2" placeholder="Email" required autofocus>
+                            <input type="password" name="password" class="form-control mb-2" placeholder="Password" required>
                             <br>
                             <button class="btn btn-lg btn-primary btn-block mb-1" type="submit">Sign in</button>
 <!--                            <label class="checkbox float-left">-->

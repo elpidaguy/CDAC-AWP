@@ -16,6 +16,7 @@
 </head>
 <body>
     <div class="container-fluid" id="siteContainer">
+        <?php session_start(); ?>
         <?php include 'serverScripts/DBConnector.php' ?>
         <?php include 'views/menuView.php'?>
         <?php include 'views/productDetailView.php' ?>

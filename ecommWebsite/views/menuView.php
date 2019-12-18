@@ -28,6 +28,9 @@
 
       <ul class="navbar-nav">
           <li class="nav-item">
+              <?php
+                print_r($_SESSION);
+              ?>
               <button class="text-white btn btn-danger btn-lg" onclick="location.href='views/loginView.php'"> <i class="fa fa-sign-in" aria-hidden="true"></i>
                   Sign In</button>
           </li>
