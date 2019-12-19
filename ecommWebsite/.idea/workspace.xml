@@ -62,6 +62,7 @@
       <workItem from="1576595264535" duration="56000" />
       <workItem from="1576595326156" duration="4408000" />
       <workItem from="1576664580562" duration="5814000" />
+      <workItem from="1576721652671" duration="8389000" />
     </task>
     <servers />
   </component>
@@ -73,14 +74,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="247" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576595316162" />
-    <state x="795" y="443" key="NewPhpFileDialog" timestamp="1576595700978">
+    <state x="795" y="443" key="NewPhpFileDialog" timestamp="1576724264621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="795" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576595700978" />
-    <state x="661" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1576664580258">
+    <state x="795" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576724264621" />
+    <state x="661" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1576721770526">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="661" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576664580258" />
+    <state x="661" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576721770526" />
     <state x="657" y="125" width="606" height="789" key="find.popup" timestamp="1576510190681">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

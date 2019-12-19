@@ -29,10 +29,31 @@
       <ul class="navbar-nav">
           <li class="nav-item">
               <?php
-                print_r($_SESSION);
+              $loginData = [];
+              if(isset($_COOKIE['userData']))
+              {
+                  $loginData = json_decode($_COOKIE["userData"], true);
+              }
+                if(empty($loginData))
+                {
               ?>
               <button class="text-white btn btn-danger btn-lg" onclick="location.href='views/loginView.php'"> <i class="fa fa-sign-in" aria-hidden="true"></i>
                   Sign In</button>
+              <?php }else{
+
+              ?>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger"> Hi, <?php print_r($loginData['firstName']); ?></button>
+                        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="http://localhost/ecommWebsite/serverScripts/logout.php">Logout</a>
+                        </div>
+                    </div>
+              <?php
+              }
+                ?>
           </li>
       </ul>
 <!--    <form class="form-inline my-2 my-lg-0">-->

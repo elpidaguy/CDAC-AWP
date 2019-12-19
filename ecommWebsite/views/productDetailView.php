@@ -1,7 +1,6 @@
 <?php
 //$str = file_get_contents('http://localhost/ecommWebsite/js/data.json');
 //$json = json_decode($str, true);
-
 $sql = "SELECT * FROM products";
 
 $result = $conn->query($sql);
@@ -54,15 +53,34 @@ $result = $conn->query($sql);
                                     </div>
                                         <hr>
                                     <div class="row" style="padding: 0px !important;">
-                                        <div class="col-md-4">
-                                            <!--                                            <label>Qty: </label>-->
-                                            <input type="number" placeholder="Enter QTY" class="form-control" name="qty" min="1" max="10">
-                                        </div>
-                                        <div class="text-center col-md-8 mt-2 mb-2">
-                                            <button onclick="addToCart(<?php echo $data['id']; ?>)" class="btn btn-danger"> <i class="fa fa-shopping-cart"
-                                                                                                                               aria-hidden="true"></i>
-                                                Add to Cart</button>
-                                        </div>
+                                        <?php
+                                            $loginData = [];
+                                            if(isset($_COOKIE['userData']))
+                                            {
+                                                $loginData = json_decode($_COOKIE["userData"], true);
+                                            }
+                                            if(!empty($loginData)) {
+                                                ?>
+                                                <div class="col-md-4">
+                                                    <input type="number" placeholder="QTY" class="form-control"
+                                                           name="qty" min="1" max="10">
+                                                </div>
+                                                <div class="text-center col-md-8 mt-2 mb-2">
+                                                    <button onclick="addToCart(<?php echo $data['id']; ?>)"
+                                                            class="btn btn-danger"><i class="fa fa-shopping-cart"
+                                                                                      aria-hidden="true"></i>
+                                                        Add to Cart
+                                                    </button>
+                                                </div>
+                                                <?php
+                                            }else {
+                                                ?>
+                                                <div class="col-md-12">
+                                                    <div class="alert alert-warning text-center">Login first to Add To Cart</div>
+                                                </div>
+                                                <?php
+                                            }
+                                        ?>
                                     </div>
                                 </div>
                             </div>
