@@ -12,7 +12,7 @@
     <script src="../js/bootstrap/jquery-3.4.1.slim.min.js" ></script>
     <script src="../js/bootstrap/popper.min.js" ></script>
     <script src="../js/bootstrap/bootstrap.min.js" ></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 <body>
 <div class="container-fluid" id="siteContainer">
